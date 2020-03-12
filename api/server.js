@@ -5,7 +5,8 @@ const server = express();
 server.use(express.json());
 
 server.get('/', (req, res) => {
-    const jokes = [
+    const jokes = {
+    jokes: [
         {
             'id': 1,
             'value': "If you accidentally sit in Chuck Norris' seat at the opera, expect to have a clarinet jammed up your ass by intermission."
@@ -38,7 +39,9 @@ server.get('/', (req, res) => {
             'id': 8,
             'value': "Chuck Norris decided to try bull riding. He drew a nasty bull named Snort. When Snort heard Chuck was going to ride him, he went to his veterinarian, got castrated and changed his name to Daisy."
         }
-    ];
+    
+    ]
+};
 
     res.status(200).json(jokes)
 });
